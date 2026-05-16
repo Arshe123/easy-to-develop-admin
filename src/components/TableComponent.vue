@@ -398,7 +398,12 @@ const deleteRow = () => {
     refreshData();
   };
 
-  props.dataDriver.delete(null, { id: selectedRow.value.id }, success, failure);
+  let pks = {};
+  for(let pk of props.dataPkNames){
+    pks[pk] = selectedRow.value[pk];
+  }
+
+  props.dataDriver.delete(null, pks, success, failure);
 };
 
 /**
