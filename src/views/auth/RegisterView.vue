@@ -6,7 +6,7 @@
           注册账号
         </h2>
         <p class="mt-2 text-center text-sm text-gray-600">
-          加入 易开发
+          加入 {{ Store.get('web-config')?.WEB_NAME || '易开发' }}
         </p>
       </div>
       <el-form
@@ -91,6 +91,7 @@ import { ref, reactive, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { ElNotification } from 'element-plus';
 import { globalApi } from '@/api/global';
+import Store from "@/store/index.js";
 
 const router = useRouter();
 const registerFormRef = ref(null);

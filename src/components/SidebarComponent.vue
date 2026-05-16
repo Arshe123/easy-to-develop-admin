@@ -9,9 +9,9 @@
     <div class="flex items-center justify-between h-16 px-6 border-b border-gray-200">
       <div class="flex items-center gap-2">
         <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-          MS
+          {{ Store.get('web-config')?.WEB_NAME?.slice(0, 1) || 'E' }}
         </div>
-        <span class="text-xl font-bold text-gray-800">管理系统</span>
+        <span class="text-xl font-bold text-gray-800">{{ Store.get('web-config')?.WEB_NAME || '易开发' }}后台管理系统</span>
       </div>
       <button v-if="isMobile" @click="emit('toggle-sidebar')" class="p-1 text-gray-500 hover:text-gray-700">
         <el-icon :size="24"><Close /></el-icon>

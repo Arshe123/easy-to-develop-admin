@@ -6,7 +6,7 @@
           用户登录
         </h2>
         <p class="mt-2 text-center text-sm text-gray-600">
-          欢迎回到 易开发
+          欢迎回到 {{ Store.get('web-config')?.WEB_NAME || '易开发' }}
         </p>
       </div>
       <el-form
