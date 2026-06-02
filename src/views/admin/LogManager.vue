@@ -16,8 +16,12 @@ import { globalApi } from '@/api/global';
 
 const columns = [
   {
-    prop: 'user.username',
+    prop: 'username',
     label: '操作用户',
+  },
+  {
+    prop: 'roleKey',
+    label: '角色',
   },
   {
     prop: 'userIp',
